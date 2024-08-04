@@ -8,7 +8,6 @@ import Link from "next/link";
 import Image from "next/image";
 import IMG from "@/images/jlo.png";
 import IMG2 from "@/app/img.jpg";
-
 import {
   Sheet,
   SheetTrigger,
