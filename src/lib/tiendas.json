@@ -1,0 +1,72 @@
+[
+  {
+    "id": 0,
+    "provincia": "Camagüey",
+    "envios": [
+      {
+        "id": 0,
+        "Municipio": "Céspedes y Cuidad Camagüey",
+        "enlace": "https://chat.whatsapp.com/Chsvq5k0XIq4hNmJp4fyaC"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "provincia": "Ciego de Avila",
+    "envios": [
+      {
+        "id": 0,
+        "Municipio": "Turiguanó y Ceballos",
+        "enlace": "https://chat.whatsapp.com/Kxg3z2BZKhuJ8D3QghDkgX"
+      },
+      {
+        "id": 1,
+        "Municipio": "Ciudad Ciego de Avila",
+        "enlace": "https://chat.whatsapp.com/LQejtgcoEh44zt7KXadpKx"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "provincia": "Sancti Spiritus",
+    "envios": [
+      {
+        "id": 0,
+        "Municipio": "Cuidad Sancti Spiritus",
+        "enlace": "https://chat.whatsapp.com/IQjqvj7WtBRDeg6EERQT8L"
+      },
+      {
+        "id": 1,
+        "Municipio": "Trinidad",
+        "enlace": "https://chat.whatsapp.com/Chsvq5k0XIq4hNmJp4fyaC"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "provincia": "Villa Clara",
+    "envios": [
+      {
+        "id": 0,
+        "Municipio": "Camajuaní",
+        "enlace": "https://chat.whatsapp.com/Jv43AfyxrbwGZRmAFBdbnN"
+      },
+      {
+        "id": 1,
+        "Municipio": "Ranchuelo",
+        "enlace": "https://chat.whatsapp.com/BbnsxCmV1yd0wiszSN23xr"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "provincia": "Cienfuegos",
+    "envios": [
+      {
+        "id": 0,
+        "Municipio": "Cienfuegos",
+        "enlace": "https://chat.whatsapp.com/L6CB0AypuXW6yIfHaPKxjR"
+      }
+    ]
+  }
+]

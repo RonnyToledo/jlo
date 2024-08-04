@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id       Int      @id @default(autoincrement())
+  userName   String @unique
+  email    String
+  password String
+  userId   String   @unique @default(cuid())
+  store    Store[]
+  
+}
+model Store {
+  id       Int      @id @default(autoincrement())
+  sitio             String  @unique
+  variable          String
+  location          String?
+  poster            String?
+  welcomeParagraph  String?
+  infoParagraph     String?
+  instagram         String?
+  category          Store_Category[]
+  province          String
+  storeName         String
+  productos         Store_Product[]
+  comments          Store_Comment[]
+  Monedas           Store_ExchangeRate[]
+  monedaPreferida   Store_MonPref[]
+  Horario           Store_Hours[]
+  userStore         String
+  user         Usuario    @relation(fields: [userStore], references: [userId])
+}
+
+
+model Store_Comment {
+  id              Int      @id @default(autoincrement())
+  commenter       String
+  idea            String
+  storeId         Int
+  store           Store    @relation(fields: [storeId], references: [id])
+}
+
+model Store_ExchangeRate {
+  id          Int      @id @default(autoincrement())
+  currency    String
+  rate        Float
+  storeId     Int
+  store       Store    @relation(fields: [storeId], references: [id])
+}
+
+model Store_Product {
+  id          Int       @id @default(autoincrement())
+  title       String
+  price       Float
+  description String?
+  discount    Float     @default(0)
+  favorite    Boolean   @default(false)
+  outOfStock  Boolean   @default(false)
+  image       String
+  category    String
+  createdAt   DateTime  @default(now())
+  enabled     Boolean   @default(true)
+  minusButton Boolean   @default(false)
+  quantity    Int       @default(0)
+  storeID     Int
+  tore       Store     @relation(fields: [storeID], references: [id])
+}
+
+model Store_Category {
+  id          Int      @id @default(autoincrement())
+  category    String
+  storeId     Int
+  store       Store    @relation(fields: [storeId], references: [id])
+}
+
+model Store_MonPref {
+  id          Int      @id @default(autoincrement())
+  moneda    String
+  price     Int
+  storeId     Int
+  store       Store    @relation(fields: [storeId], references: [id])
+}
+model Store_Hours {
+   id          Int      @id @default(autoincrement())
+  openL Int
+  openM Int
+  openX Int
+  openJ Int
+  openV Int
+  openS Int
+  openD Int
+  closeL Int
+  closeM Int
+  closeX Int
+  closeJ Int
+  closeV Int
+  closeS Int
+  closeD Int
+  storeId     Int
+  store       Store    @relation(fields: [storeId], references: [id])
+}
