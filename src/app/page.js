@@ -300,7 +300,7 @@ export default function Component() {
                 <FacebookIcon className="h-10 w-10" />
               </Link>
               <Link
-                href="#"
+                href="https://rh-menu.vercel.app/t/JlosCosmetics"
                 className="flex items-center gap-2 text-muted-foreground p-6"
               >
                 <GlobeIcon className="h-10 w-10" />
