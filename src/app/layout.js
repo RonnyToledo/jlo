@@ -1,5 +1,12 @@
 import "./globals.css";
 
+import { Sevillana } from "next/font/google";
+
+const sevillana = Sevillana({
+  subsets: ["latin"],
+  weight: ["400"], // Especifica los pesos aquí
+});
+
 export const metadata = {
   title: "Jlo's Cosmetic",
   description:
@@ -11,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={sevillana.className}>
       <body style={{ scrollBehavior: "smooth" }}>{children}</body>
     </html>
   );
